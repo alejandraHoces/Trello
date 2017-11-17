@@ -25,9 +25,9 @@ header {
 
 .tables {
     display: inline-block;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.3);
     padding: 8px;
-    opacity: 0.5;
+    color: white;
     font-size: 20px;
     border-radius: 5px;
     margin: 10px;
@@ -35,20 +35,23 @@ header {
 
 .search {
     display: inline-block;
-    background-color: white;
+    background:rgba(255,255,255,.3);
     padding: 8px;
-    opacity: 0.5;
+    color: white;
     font-size: 20px;
     border-radius: 5px;
-    margin-right: 750px;
+    margin-right: 800px;
 }
 
+.search input {
+  background:transparent;
+}
 
 .title {
     display: inline-block;
     position: absolute;
     top: 15px;
-    left: 580px;
+    left: 650px;
 }
 
 .icons {
@@ -57,10 +60,10 @@ header {
 
 .icons span {
     display: inline-block;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.3);
     padding: 8px;
     font-size: 20px;
-    opacity: 0.5;
+    color: white;
     border-radius: 5px;
 }
 .icons img {
@@ -69,5 +72,48 @@ header {
     border-radius: 100%;
     position: absolute;
     top: 8px;
-    right: 20px;
+    right: 40px;
   }
+
+.codeChallenges {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+}
+
+.codeChallenges h3 {
+  margin: 10px;
+  display: inline-block;
+}
+
+.codeChallenges .star {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.codeChallenges h5 {
+  display: inline-block;
+}
+
+p {
+  display: inline-block;
+  font-weight: 900;
+  margin-left: 760px;
+}
+
+.codeChallenges a {
+  color: white;
+}
+
+.inputtext {
+  font-size: 20px;
+  background-color: #ff3c1a;
+  margin: 10px;
+  padding: 10px;
+}
+
+input::placeholder {
+  color: white;
+}
+
+/*color de cuadro-color de input-color de boton y letra*/
