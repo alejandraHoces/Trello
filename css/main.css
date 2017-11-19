@@ -1,50 +1,64 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.codeChallenges a {
+    color: white;
+}
+.d-inlineblock {
+    display: inline-block;
+}
+
+.d-none{
+    display: none;
+}
+
+.m-right5 {
+    margin-right: 0.5em;
 }
 
 input {
-  border: none;
-  outline: none;
+    border: none;
+    outline: none;
 }
 
-
 body {
-   background-color: #ff5233;
+    background-color: #e6ac00;
 }
 
 header {
-   width: 100%;
-   background-color: #ff3c1a;
+    width: 100%;
+    background-color: #cc9900;
 }
 
 .tables h4 {
-   display: inline-block;
+    display: inline-block;
 }
 
 .tables {
     display: inline-block;
     background: rgba(255, 255, 255, 0.3);
-    padding: 8px;
+    padding: 0.5em;
     color: white;
-    font-size: 20px;
+    font-size: 1.2em;
     border-radius: 5px;
-    margin: 10px;
+    margin: 0.3em;
 }
 
 .search {
     display: inline-block;
     background:rgba(255,255,255,.3);
-    padding: 8px;
+    padding: 0.5em;
     color: white;
-    font-size: 20px;
+    font-size: 1.2em;
     border-radius: 5px;
-    margin-right: 800px;
+    margin-right: 770px;
 }
 
 .search input {
-  background:transparent;
+    background:transparent;
 }
 
 .title {
@@ -61,59 +75,164 @@ header {
 .icons span {
     display: inline-block;
     background: rgba(255, 255, 255, 0.3);
-    padding: 8px;
-    font-size: 20px;
+    padding: 0.5em;
+    font-size: 1.2em;
     color: white;
     border-radius: 5px;
 }
 .icons img {
-    width: 45px;
-    height: 45px;
+    width: 3em;
+    height: 3em;
     border-radius: 100%;
     position: absolute;
-    top: 8px;
-    right: 40px;
+    top: 3px;
+    right: 80px;
   }
 
 .codeChallenges {
-  display: inline-block;
-  color: white;
-  font-size: 20px;
+    display: inline-block;
+    color: white;
+    font-size: 1.1em;
 }
 
 .codeChallenges h3 {
-  margin: 10px;
-  display: inline-block;
+    margin: 10px;
+    display: inline-block;
 }
 
 .codeChallenges .star {
-  display: inline-block;
-  margin: 0 20px;
+    display: inline-block;
+    margin: 0 20px;
 }
 
 .codeChallenges h5 {
-  display: inline-block;
+    display: inline-block;
 }
 
 p {
-  display: inline-block;
-  font-weight: 900;
-  margin-left: 760px;
+    display: inline-block;
+    font-weight: 900;
+    margin-left: 760px;
 }
 
-.codeChallenges a {
-  color: white;
+#container {
+    white-space: nowrap;
+    padding-top: 3.5em;
+
 }
 
-#inputtext {
-  font-size: 20px;
-  background-color: #ff3c1a;
-  margin: 10px;
-  padding: 10px;
+
+.list {
+    width: 17em;
+    height: 3em;
+    margin: 0.6em 0.5em;
+    background-color: #cc9900;
+    padding: 0.6em;
+    color: white;
+    border-radius: 5px;
 }
 
-input::placeholder {
-  color: white;
+.newlist {
+    width: 15em;
+    height: 3em;
+    margin: 0.6em 0.5em;
+    background-color: #E2E4E6;
+    padding: 0.5em;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
-/*color de cuadro-color de input-color de boton y letra*/
+.add {
+    width: 15em;
+    height: 3em;
+    margin: 0.6em 0.5em;
+    background-color: #E2E4E6;
+    padding: 0.6em;
+    border-radius: 5px;
+    color: gray;
+}
+
+.add:hover {
+    background-color: lightgray;
+}
+.text-cards {
+    width: 15em;
+    height: 3em;
+    margin: 0.6em 0.5em;
+    background-color: white;
+    padding: 0.6em;
+    border-radius: 5px;
+}
+
+.transicion {
+    transition: all 0.7s ease;
+    transform:scale(1.04);
+}
+
+.receptor {
+    width: 15em;
+    height: 3em;
+    margin: 0.6em 0.5em;
+    background-color: gray;
+    padding: 0.6em;
+    border-radius: 5px;
+}
+
+.opacidad {
+    background-color: grey;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.trello-body {
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 17em;
+    background-color: #E2E4E6;
+    vertical-align: top;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.enlarge {
+    height:
+}
+
+.bg {
+    background-color: #cc9900;
+}
+
+.newform {
+    width: 17em;
+    height: auto;
+    margin: 0.6em 0.5em;
+    padding: 0.3em;
+    background-color: #E2E4E6;
+    border-radius: 5px;
+}
+.firstinput {
+    width: 94%;
+    margin: 0.3em 0.7em;
+    padding: 0.3em;
+    border-radius: 5px;
+    border: none;
+}
+
+.boton {
+    display: block;
+    padding: 0.5em 3em;
+    margin: 0.3em 0.7em;
+    background-color: #5BAE45;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.textarea {
+    width: 92%;
+    margin: 0.3em 0.7em;
+    padding: 0.3em;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+}
