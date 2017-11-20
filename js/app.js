@@ -26,7 +26,7 @@
 			 listContainer.appendChild(firstForm);
 			 listContainer.appendChild(addForm);
 			 remover.remove();
- */     // Añadiendo el evento Drag & Drop de las tarjetas para que pueda ser movida entre las listas creadas.
+      // Añadiendo el evento Drag & Drop de las tarjetas para que pueda ser movida entre las listas creadas.
 			 var containerCards = document.createElement('div');
 			 containerCards.classList.add('trello-body');
 			 container.insertBefore(containerCards, container.lastElementChild);
@@ -45,7 +45,7 @@
 				 this.classList.add('d-none');
 				 newForm('form', 'fomulario', containerCards, this);
 			 });
-	/*	 });
+		 });
 	 }
   // Añadiendo estilos
 	 function hideElement(a, b) {
@@ -59,7 +59,7 @@
 		 div.innerHTML = texto;
 		 container.appendChild(div);
 	 }
-
+*/
 	 function newForm(form, clase, container, agregarTarjeta) {
 		 var form = document.createElement(form);
 		 form.classList.add(clase);
@@ -80,7 +80,7 @@
 			 div.setAttribute('id', 'id' + accountant);
 			 div.innerHTML = text;
 			 accountant ++;
-			 div.addEventListener('dragstart', empiezaArrastrar);
+	/*		 div.addEventListener('dragstart', empiezaArrastrar);
 			 div.addEventListener('drop', soltar);
 			 div.addEventListener('dragend', terminaArrastrar);
 			 container.insertBefore(div, agregarTarjeta);
