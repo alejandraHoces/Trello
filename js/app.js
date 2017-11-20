@@ -1,4 +1,4 @@
-/*//  Añadiendo funcion que contiene la seleccion de mis elementos
+//  Añadiendo funcion que contiene la seleccion de mis elementos
 (function() {
   var addForm = document.getElementById('addForm');
 	 var button = document.getElementById('button');
@@ -66,7 +66,7 @@
 		 newElements('textarea', 'textarea', '', form);
 		 newElements('button', 'boton', 'Añadir', form);
 		 container.appendChild(form);
-*/
+
 		 form.lastElementChild.addEventListener('click', function(event) {
 			 event.preventDefault();
 			 agregarTarjeta.classList.remove('d-none');
