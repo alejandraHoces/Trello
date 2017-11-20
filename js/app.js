@@ -59,7 +59,7 @@
 		 div.innerHTML = texto;
 		 container.appendChild(div);
 	 }
-
+  // FUNCION PRINCIPAL AÑADE LAS TARGETAS A MI CONTENEDOR
 	 function newForm(form, clase, container, agregarTarjeta) {
 		 var form = document.createElement(form);
 		 form.classList.add(clase);
