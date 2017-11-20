@@ -7,7 +7,7 @@
 	 var container = document.getElementById('container');
 	 var accountant = 1;
   // Añadiendo funcion que ejecuta despues de cargada la pagina
-	*/ window.addEventListener('load', loadpage);
+	 window.addEventListener('load', loadpage);
   // funcion creada para que al hacer click se enfoque el elemento
 	 function loadpage() {
 		 addForm.addEventListener('click', function() {
@@ -15,7 +15,7 @@
 			 input.focus();
 			 input.value = '';
 		 });
-/*    // Añadiendo lista nueva y añadiendo estilos
+    // Añadiendo lista nueva y añadiendo estilos
 		 button.addEventListener('click', function(event) {
 			 event.preventDefault();
 			 var listContainer = document.createElement('div');
@@ -66,7 +66,7 @@
 		 newElements('textarea', 'textarea', '', form);
 		 newElements('button', 'boton', 'Añadir', form);
 		 container.appendChild(form);
-
+*/
 		 form.lastElementChild.addEventListener('click', function(event) {
 			 event.preventDefault();
 			 agregarTarjeta.classList.remove('d-none');
