@@ -26,7 +26,7 @@
 			 listContainer.appendChild(firstForm);
 			 listContainer.appendChild(addForm);
 			 remover.remove();
-      // Añadiendo el evento Drag & Drop de las tarjetas para que pueda ser movida entre las listas creadas.
+/*      // Añadiendo el evento Drag & Drop de las tarjetas para que pueda ser movida entre las listas creadas.
 			 var containerCards = document.createElement('div');
 			 containerCards.classList.add('trello-body');
 			 container.insertBefore(containerCards, container.lastElementChild);
