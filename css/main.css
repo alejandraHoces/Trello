@@ -1,12 +1,10 @@
+/*estilos generales*/
 * {
    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.codeChallenges a {
-    color: white;
-}
 .d-inlineblock {
     display: inline-block;
 }
@@ -27,12 +25,12 @@ input {
 body {
     background-color: #e6ac00;
 }
-
+/*color y ancho de encabezado*/
 header {
     width: 100%;
     background-color: #cc9900;
 }
-
+/*estilos de el cuadro tablero*/
 .tables h4 {
     display: inline-block;
 }
@@ -46,7 +44,7 @@ header {
     border-radius: 5px;
     margin: 0.3em;
 }
-
+/*estilos de el cuadro buscador*/
 .search {
     display: inline-block;
     background:rgba(255,255,255,.3);
@@ -60,14 +58,14 @@ header {
 .search input {
     background:transparent;
 }
-
+/*estilos de el titulo*/
 .title {
     display: inline-block;
     position: absolute;
     top: 15px;
     left: 650px;
 }
-
+/*estilos de los iconos y foto de usuario*/
 .icons {
     display: inline-block;
 }
@@ -88,7 +86,7 @@ header {
     top: 3px;
     right: 80px;
   }
-
+/*estilos de la seccion uno*/
 .codeChallenges {
     display: inline-block;
     color: white;
@@ -100,6 +98,10 @@ header {
     display: inline-block;
 }
 
+
+.codeChallenges a {
+    color: white;
+}
 .codeChallenges .star {
     display: inline-block;
     margin: 0 20px;
@@ -114,13 +116,13 @@ p {
     font-weight: 900;
     margin-left: 760px;
 }
-
+/*estilos de el contenedor de targeta*/
 #container {
     white-space: nowrap;
     padding-top: 3.5em;
 
 }
-
+/*estilos de la lista creada*/
 
 .list {
     width: 17em;
@@ -131,7 +133,7 @@ p {
     color: white;
     border-radius: 5px;
 }
-
+/*estilos de la lista creada desde js*/
 .newlist {
     width: 15em;
     height: 3em;
@@ -141,7 +143,7 @@ p {
     font-weight: bold;
     border-radius: 5px;
 }
-
+/*estilos a agregar a el contenedor creado desde js*/
 .add {
     width: 15em;
     height: 3em;
@@ -155,6 +157,7 @@ p {
 .add:hover {
     background-color: lightgray;
 }
+/*estilos de el texto de las targetas creado desde js*/
 .text-cards {
     width: 15em;
     height: 3em;
@@ -163,27 +166,13 @@ p {
     padding: 0.6em;
     border-radius: 5px;
 }
-
-.transicion {
-    transition: all 0.7s ease;
-    transform:scale(1.04);
-}
-
-.receptor {
-    width: 15em;
-    height: 3em;
-    margin: 0.6em 0.5em;
-    background-color: gray;
-    padding: 0.6em;
-    border-radius: 5px;
-}
-
+/*Estilo de opacidad a arrastrar las targetas*/
 .opacidad {
     background-color: grey;
     opacity: 0.5;
     cursor: pointer;
 }
-
+/*estilos de el contenedor de targetas movible*/
 .trello-body {
     padding: 0.5em;
     margin: 0.5em;
@@ -194,14 +183,10 @@ p {
     display: inline-block;
 }
 
-.enlarge {
-    height:
-}
-
 .bg {
     background-color: #cc9900;
 }
-
+/*estilos de el formulario creado en html*/
 .newform {
     width: 17em;
     height: auto;
@@ -210,6 +195,7 @@ p {
     background-color: #E2E4E6;
     border-radius: 5px;
 }
+/*estilos de el input creado en html*/
 .firstinput {
     width: 94%;
     margin: 0.3em 0.7em;
@@ -217,7 +203,7 @@ p {
     border-radius: 5px;
     border: none;
 }
-
+/*estilos de el boton creado en html*/
 .boton {
     display: block;
     padding: 0.5em 3em;
@@ -227,7 +213,7 @@ p {
     color: white;
     border-radius: 5px;
 }
-
+/*estilos de el textarea creado desde js*/
 .textarea {
     width: 92%;
     margin: 0.3em 0.7em;

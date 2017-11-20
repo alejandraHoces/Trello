@@ -1,22 +1,23 @@
-;(function() {
+//  Añadiendo funcion que contiene la seleccion de mis elementos
+(function() {
   var addForm = document.getElementById('addForm');
 	 var button = document.getElementById('button');
 	 var input = document.getElementById('input');
 	 var firstForm = document.getElementById('firstForm');
 	 var container = document.getElementById('container');
 	 var accountant = 1;
-
+  // Añadiendo funcion que ejecuta despues de cargada la pagina
 	 window.addEventListener('load', loadpage);
-
+  // funcion creada para que al hacer click se enfoque el elemento
 	 function loadpage() {
 		 addForm.addEventListener('click', function() {
 			 hideElement(firstForm, addForm);
 			 input.focus();
 			 input.value = '';
 		 });
-
-		 button.addEventListener('click', function(e) {
-			 e.preventDefault();
+    // Añadiendo lista nueva y añadiendo estilos
+		 button.addEventListener('click', function(event) {
+			 event.preventDefault();
 			 var listContainer = document.createElement('div');
 			 listContainer.classList.add('d-inlineblock');
 
@@ -25,7 +26,7 @@
 			 listContainer.appendChild(firstForm);
 			 listContainer.appendChild(addForm);
 			 remover.remove();
-
+      // Añadiendo el evento Drag & Drop de las tarjetas para que pueda ser movida entre las listas creadas.
 			 var containerCards = document.createElement('div');
 			 containerCards.classList.add('trello-body');
 			 container.insertBefore(containerCards, container.lastElementChild);
@@ -35,7 +36,7 @@
 			 containerCards.addEventListener('dragend', terminaArrastrarTrello);
 
 			 hideElement(firstForm, addForm);
-
+      // Añadiendo nuevas clase,estilos y eventos a targetas
 			 newElements('div', 'newlist', input.value, containerCards);
 			 newElements('div', 'add', 'Añadir una tarjeta', containerCards);
 
@@ -46,7 +47,7 @@
 			 });
 		 });
 	 }
-
+  // Añadiendo estilos
 	 function hideElement(a, b) {
 		 a.classList.toggle('d-none');
 		 b.classList.toggle('d-none');
@@ -66,8 +67,8 @@
 		 newElements('button', 'boton', 'Añadir', form);
 		 container.appendChild(form);
 
-		 form.lastElementChild.addEventListener('click', function(e) {
-			 e.preventDefault();
+		 form.lastElementChild.addEventListener('click', function(event) {
+			 event.preventDefault();
 			 agregarTarjeta.classList.remove('d-none');
 			 form.classList.add('d-none');
 
@@ -86,39 +87,39 @@
 		 });
 	 }
 
-
-	 function empiezaArrastrar(e) {
-		 e.dataTransfer.setData('text', this.id);
+  // Agregando un estilo personalizado a la tarjeta cuando esté siendo arrastrada por el usuario.
+	 function empiezaArrastrar(event) {
+		 event.dataTransfer.setData('text', this.id);
 		 this.classList.add('opacidad');
 	 }
-
-	 function arrastrarSobreTrello(e) {
-		 e.preventDefault();
+  // Agregando un estilo a la lista cuando la tarjeta esté pasando por encima (dragover).
+	 function arrastrarSobreTrello(event) {
+		 event.preventDefault();
 		 this.classList.add('bg');
 	 }
 
-	 function dejarTrello(e) {
-		 e.preventDefault();
+	 function dejarTrello(event) {
+		 event.preventDefault();
 		 this.classList.remove('bg');
 	 }
 
 
-	 function soltar(e) {
-	   e.preventDefault();
+	 function soltar(event) {
+	   event.preventDefault();
 	 }
 
-	 function soltarTrello(e) {
-	   e.preventDefault();
-	   var arrastrado = e.dataTransfer.getData('text');
+	 function soltarTrello(event) {
+	   event.preventDefault();
+	   var arrastrado = event.dataTransfer.getData('text');
 	   var elemento = document.getElementById(arrastrado);
 	   this.insertBefore(elemento, this.children[1]);
 	 }
-	 function terminaArrastrarTrello(e) {
+  // Efecto del cuerpo de las Listas cuando se mueve la tarjeta sobre ellos
+	 function terminaArrastrarTrello(event) {
 		 this.classList.remove('bg');
 	 }
 
-	 function terminaArrastrar(e) {
+	 function terminaArrastrar(event) {
 		 this.classList.remove('opacidad');
-		 this.classList.add('animated', 'bounceIn');
 	 }
 }());
