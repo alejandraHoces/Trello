@@ -1,4 +1,4 @@
-//  Añadiendo funcion que contiene la seleccion de mis elementos
+/*//  Añadiendo funcion que contiene la seleccion de mis elementos
 (function() {
   var addForm = document.getElementById('addForm');
 	 var button = document.getElementById('button');
@@ -26,7 +26,7 @@
 			 listContainer.appendChild(firstForm);
 			 listContainer.appendChild(addForm);
 			 remover.remove();
-/*      // Añadiendo el evento Drag & Drop de las tarjetas para que pueda ser movida entre las listas creadas.
+ */     // Añadiendo el evento Drag & Drop de las tarjetas para que pueda ser movida entre las listas creadas.
 			 var containerCards = document.createElement('div');
 			 containerCards.classList.add('trello-body');
 			 container.insertBefore(containerCards, container.lastElementChild);
@@ -45,7 +45,7 @@
 				 this.classList.add('d-none');
 				 newForm('form', 'fomulario', containerCards, this);
 			 });
-		 });
+	/*	 });
 	 }
   // Añadiendo estilos
 	 function hideElement(a, b) {
