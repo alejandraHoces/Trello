@@ -1,55 +1,40 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.css">
-    <title>Reto Trello</title>
-  </head>
-  <body>
-    <!--Encabezado de mi pagina-->
-    <header>
-          <div class="tables">
-             <span><i class="fa fa-trello" aria-hidden="true"></i></span>
-               <h4>Tableros</h4>
-          </div>
-          <div class="search">
-            <input type="text" name="search">
-            <span class="lens"><i class="fa fa-search" aria-hidden="true"></i></span>
-          </div>
-          <div class="title">
-            <img src="assets/images/header-logo.png" alt="header-logo">
-          </div>
-          <div class="icons">
-              <span><i class="fa fa-plus" aria-hidden="true"></i></span>
-              <span><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-              <span><i class="fa fa-bell-o" aria-hidden="true"></i></span>
-              <img src="assets/images/imagenusuario.jpg" alt="usuario">
-          </div>
-    </header>
-    <!--seccion uno mostrar tablero-->
-    <section class="codeChallenges">
-      <div>
-        <h3>Tablero-Retos de Codigo<h3>
-        <span class="star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
-        <span><i class="fa fa-lock" aria-hidden="true"></i></span>
-        <h5>Privado</h5>
-        <p>...</p>
-        <a href="#">Mostrar Menú</a>
-      </div>
-  </section>
-  <!--seccion dos contenedor de targetas -->
-  <div id="container">
-        <section class="d-inlineblock">
-            <div id="addForm" class="list b-radius">Añadir una lista ...</div>
-              <form id="firstForm" class="d-none newform">
-                <input class="firstinput" type="text" id="input" placeholder="Nombre de lista"><br>
-                <button class="boton" type="submit" id="button">Guardar</button>
-            </form>
-        </section>
-     </div>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Trello</title>
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+	</head>
+	<body>
+		<div id="container">
+			<nav>
+				<div id="tab"><span class="icon-trello"></span><span>Tableros</span></div>
+				<span class="wrapper"><input type="text" name="search" placeholder="" id="nav-search"></span>
+				<img src="assets/images/header-logo.png" alt="" id="logo">
+			</nav>
+			<section id="titles">
+				<span><a href="#boards">Tablero</a></span>
+			</section>
 
-   <script type="text/javascript" src="js/app.js">
- </script>
- </body>
+			<!-- En este espacio estarán los tableros -->
+			<section id="boards">
+
+				<!-- Esta forma estará invisible hasta que el usuario haga clic sobre #add-list -->
+				<form id="main-board" class="invisible">
+					<!-- <ul id="todo-list"></ul> -->
+					<input type="text" placeholder="Añadir una lista..." id="title-list">
+					<button type="submit" id="save" class="button">Guardar</button>
+					<button type="button" id="close" class="closing-button"><span class="icon-close"></span></button>
+				</form>
+
+				<!-- Este div cambiará cuando se le haga clic -->
+				<div id="add-list"><span>Añadir una lista...</span></div>
+			</section>
+
+		</div>
+		<script src="assets/js/app.js"></script>
+
+	</body>
 </html>

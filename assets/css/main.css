@@ -1,0 +1,335 @@
+* {
+	box-sizing: border-box;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #e6ac00;
+	font-family: "Open Sans", sans-serif;
+}
+
+nav {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #cc9900;
+}
+
+/* Automáticamente, el input, los botones y otras etiquetas no recibirán la fuente elegida en body.
+Para cambiar esto, determinamos que la fuente siempre debería ser heredada. */
+
+input, select, textarea, button {
+	font-family: inherit;
+}
+
+
+#logo {
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	margin-top: 10px;
+	opacity: 0.7;
+}
+
+#logo:hover {
+	opacity: 1;
+}
+
+#tab {
+	float: left;
+	width: 100px;
+	height: 30px;
+	background-color: rgba(255,255,255,.3);
+	color: #F3F3F3;
+	font-weight: 700;
+	font-size: 14px;
+	border-radius: 3px;
+	/* padding: 5px; */
+	line-height: 30px;
+	text-align: center;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#tab:hover {
+	background-color: rgba(255,255,255,.1)
+}
+
+#tab:hover {
+	cursor: pointer;
+}
+
+.icon-trello {
+	margin-left: 3px;
+	margin-right: 7px;
+	font-size: 15px;
+}
+
+.wrapper input[type="text"] {
+	position: relative;
+}
+
+/* Coloca la lupa dentro de la barra de búsqueda */
+
+.wrapper::before {
+	font-family: Icomoon;
+	color: white;
+	position: relative;
+	content: "\f002";
+	left: 30px;
+	top: 1px;
+}
+
+#nav-search {
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 12px 20px 12px 25px;
+	background-color: rgba(255,255,255,.3);
+	-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#nav-search:focus {
+	width: 300px;
+}
+
+#titles {
+	margin-top: 70px;
+	color: #F6F6F6;
+	font-weight: 700;
+	margin-left: 20px;
+	font-size: 18px;
+}
+
+#star {
+	font-size: 12px;
+	font-weight: 700;
+	margin-left: 10px;
+	color: #F6F6F6;
+	cursor: pointer;
+}
+
+#star.yellow {
+	font-size: 12px;
+	font-weight: 700;
+	margin-left: 10px;
+	color: #cc9900;
+}
+
+
+#titles a {
+	color: #F6F6F6;
+	text-decoration: none;
+}
+
+/* El display Flex me permitía crear listas hacía los lados en lugar de hacía
+abajo, pero al aplicarlo, las listas iban creciendo en conjunto en lugar de guiarse
+por el contenido de cada una, así que lo saqué */
+
+/* Display inline-flex hacía el truco, pero me gusta como quedó sin eso xD */
+
+#boards {
+	/* display: flex;
+	float: left; */
+	/* white-space: nowrap; */
+	/* display: inline-flex; */
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 0px;
+}
+
+#add-list {
+	width: 280px;
+	height: 40px;
+	background-color: #cc9900;
+	color: rgba(255,255,255,.7);
+	line-height: 30px;
+	font-size: 14px;
+	padding: 5px;
+	transition: 0.5s all;
+	transition-delay: 0.1s;
+	border-radius: 3px;
+	margin-right: 20px;
+}
+
+#add-list:hover {
+	transition: 0.5s all ease;
+	background-color: #cc9900;
+	cursor: pointer;
+}
+
+.invisible {
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+	transition: all .3s linear;
+}
+
+.visible {
+	opacity: 1;
+	visibility: visible;
+	display: inline-block;
+	transition: all .3s linear;
+}
+
+#main-board {
+	width: 280px;
+	height: 100px;
+	/* max-height: 100%; */
+	background-color: #E2E4E6;
+	text-align: center;
+	padding-top: 10px;
+	border-radius: 3px;
+	margin-top: 3.5px;
+	margin-right: 20px;
+}
+
+input {
+	width: 260px;
+	height: 40px;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+#main-board input {
+	background-color: #D7D8DA;
+	box-shadow: inset 0 0 15px grey;
+}
+
+.button {
+	/* width: 54px;
+	height: 22px; */
+	background-color: #5AAC44;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 6px 20px;
+	transition: 0.5s all;
+	transition-delay: 0.1s;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+
+.button:hover {
+	background-color: #44912F;
+	transition: 0.5s all ease;
+	cursor: pointer;
+}
+
+.closing-button {
+	background-color: transparent;
+	border: none;
+	color: #999;
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+.item {
+	background-color: white;
+	width: 95%;
+	color: #4D4D4D;
+	padding: 7px;
+	border-radius: 3px;
+	text-align: left;
+	word-wrap: break-word;
+	margin-bottom: 7px;
+	margin-left: 5.5px;
+	font-size: 12px;
+}
+
+.new-board {
+	width: 280px;
+	overflow-x: auto;
+	height: auto;
+	/* max-height: 100%; */
+	background-color: #E2E4E6;
+	text-align: center;
+	padding-top: 10px;
+	border-radius: 3px;
+	margin-top: 3px;
+	margin-bottom: 30px;
+	/* float: left; */
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 30px;
+	word-wrap: break-word;
+}
+
+.new-board h2 {
+	font-size: 14px;
+	font-weight: 700;
+	color: #333333;
+	text-align: left;
+	margin-left: 8px;
+	margin-bottom: 5px;
+	line-height: 20px;
+}
+
+.new-board input {
+	width: 100%;
+	background-color: #E2E4E6;
+	border-radius: 0px;
+}
+
+.new-board input:hover {
+	background-color: #9B9B9B;
+	cursor: pointer;
+}
+
+.new-board input:hover::placeholder {
+	text-decoration: underline;
+	color: #333333;
+}
+
+.new-board textarea {
+	width: 95%;
+	border-bottom: 1px solid grey;
+	border-radius: 3px;
+	resize: none;
+	overflow: hidden;
+}
+
+
+/* Con esto editaba los scrollbar de las cajas, pero al final decidí quitarlo porque
+era incómodo con scrollbar */
+
+/* .new-board::-webkit-scrollbar {
+    width: 1em;
+}
+
+.new-board::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.new-board::-webkit-scrollbar-thumb {
+  background-color: purple;
+  outline: 1px solid slategrey;
+  border-radius: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+ */
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: purple;
+  outline: 1px solid slategrey;
+  border-radius: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
